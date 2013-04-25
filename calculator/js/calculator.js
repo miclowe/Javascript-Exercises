@@ -34,5 +34,5 @@ while (isNaN(num2))
 do {
 var operand = prompt("Select type of operation: \n 1: Addition \n 2: Subtraction \n 3: Muliplication \n 4: Division");
 }
-while (operand != "1" && operand != "2" && operand != "3" && operand != "4")
+while (operand !== "1" && operand !== "2" && operand !== "3" && operand !== "4")
 calculator(num1, num2, operand);

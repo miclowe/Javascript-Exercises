@@ -5,17 +5,17 @@ function favoritesList(things) {
     var last = numStr.charAt(numStr.length-1);
     if (numStr.length === 1) {
         switch(num) {
-            case 1:
-                return num + "st";
-                break;
-            case 2:
-                return num + "nd";
-                break;
-            case 3:
-                return num + "rd";
-                break;
-            default:
-              return num + "th";
+        case 1:
+            return num + "st";
+            break;
+        case 2:
+            return num + "nd";
+            break;
+        case 3:
+            return num + "rd";
+            break;
+        default:
+          return num + "th";
         }
     } else {
       if (numStr.charAt(numStr.length-2) === "1") {

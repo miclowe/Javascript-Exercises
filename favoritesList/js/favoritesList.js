@@ -28,4 +28,4 @@ function favoritesList(things) {
 }
 
 var activities = ["eat chocolate chip cookies", "watch Mickey Mouse", "go running", "play golf"];
-favoritesList(favorites);
+favoritesList(activities);

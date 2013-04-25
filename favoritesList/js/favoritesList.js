@@ -3,33 +3,35 @@ function favoritesList(things) {
   function convertToOrdinal(num) {
     var numStr = num.toString();
     var last = numStr.charAt(numStr.length-1);
+    var ordNum = "";
     if (numStr.length === 1) {
         switch(num) {
         case 1:
-            return num + "st";
+            ordNum = num + "st";
             break;
         case 2:
-            return num + "nd";
+            ordNum = num + "nd";
             break;
         case 3:
-            return num + "rd";
+            ordNum = num + "rd";
             break;
         default:
-          return num + "th";
+          ordNum = num + "th";
         }
     } else {
       if (numStr.charAt(numStr.length-2) === "1") {
-          return num + "th";
+          ordNum = num + "th";
       } else if (last === "1") {
-          return num + "st";
+          ordNum = num + "st";
       } else if (last === "2") {
-          return num + "nd";
+          ordNum = num + "nd";
       } else if (last === "3") {
           return num + "rd";
       } else {
-          return num + "th";
+          ordNum = num + "th";
       }  
     }
+    return ordNum;
   }
 
   for(var i = 0; i < activities.length; i += 1) {

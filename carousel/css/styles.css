@@ -1,0 +1,36 @@
+body {
+  background-color: #000;
+  color: #CCC;
+  font-family: 'Lato', sans-serif;
+}
+
+header h1 {
+  color: #721518;
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
+}
+
+#imgFrame {
+  border: 5px solid #CCC;
+  margin: auto;
+  overflow: hidden;
+  height: 450px;
+  width: 450px;
+}
+
+#imgFrame img {
+  height: 450px;
+  width: 450px;
+}
+
+#imgContainer {
+  width: 4000px;  
+}
+
+#imgCounter {
+  letter-spacing: 2px;
+  margin: 15px;
+}

@@ -11,12 +11,23 @@ var imgArray = ["images/img_1.jpg",
               "images/img_7.jpg",
               "images/img_8.jpg"];
 
+var captionAray = ["Who you gonna call? #ghostbusters #staypuft #marshmallow #street #art",
+                  "Good morning. #beach #sun #sand #maui #kaanapali #relax",
+                  "#happyhour #bluemoon #beer #pupus",
+                  "Feeling just ducky. #rubberducks #quack",
+                  "#sanfrancisco #goldengatebridge #ggb #summernights #hot #latergram",
+                  "#bluemoon #fullmoon #reflection #water #night #sausalito",
+                  "Scoped out the 'hood today. #sausalito #reflections #boats",
+                  "Brooklyn Bridge #nyc #sunset #brooklynbridge"];
+
 var opacity;
 var timer;
 var imgIndex = 0;
 mainImg.setAttribute('src', imgArray[imgIndex]);
 var imgCounter = document.getElementById('imgCounter');
 imgCounter.innerHTML = (imgIndex + 1) + " of " + imgArray.length;
+var imgCaption = document.getElementById('imgCaption');
+imgCaption.innerHTML = captionAray[imgIndex];
 
 function nextImage() {
   if (imgIndex >= imgArray.length - 1) {
@@ -29,6 +40,7 @@ function nextImage() {
   mainImg.setAttribute('src', imgArray[imgIndex]);
   mainImg.style.opacity = 0;
   fadeIn();
+  imgCaption.innerHTML = captionAray[imgIndex];
   imgCounter.innerHTML = (imgIndex + 1) + " of " + (imgArray.length);
 };
 
@@ -43,6 +55,7 @@ function prevImage(){
   mainImg.setAttribute('src', imgArray[imgIndex]);
   mainImg.style.opacity = 0;
   fadeIn();
+  imgCaption.innerHTML = captionAray[imgIndex];
   imgCounter.innerHTML = (imgIndex + 1) + " of " + (imgArray.length);
 };
 
@@ -83,6 +96,3 @@ nextBtn.onclick = function() {nextImage()};
 
 var prevBtn = document.getElementById('previous');
 prevBtn.onclick = function() {prevImage()};
-
-var fadeoutBtn = document.getElementById('fadeout');
-fadeoutBtn.onclick = function() {fadeOut()};
